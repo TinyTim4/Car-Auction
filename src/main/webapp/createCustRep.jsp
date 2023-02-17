@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1" import="com.moviebay.pkg.*" import="com.moviebay.pkg.servlets.*"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Create Customer Representative account</title>
+</head>
+<body>
+	<h1>Create Customer Representative account</h1>
+	<form action="insertData.jsp" method="post">
+		Username <input type="text" name="Username"/>
+		<br></br>
+		Password <input type="password" name="Password"/>
+		<br></br>
+		<input type="hidden" name = "check" value="1"/>
+		<input type="submit" value="Register"/>
+	</form>
+	
+	<br></br>
+	<div style="color: #FF0000;">${usernameTaken}</div>
+	<div style="color: #FF0000;">${noUsername}</div>
+	<div style="color: #FF0000;">${noFirstName}</div>
+	<div style="color: #FF0000;">${noLastName}</div>
+	<div style="color: #FF0000;">${noPassword}</div>
+</body>
+</html>
